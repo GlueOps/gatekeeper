@@ -5,7 +5,7 @@ send webhooks to this app to run github user management
 ## Developer setup
 
 - Create a GitHub organization for testing
-- Create a fine-grained access token
+- [Create a fine-grained access token](https://github.com/settings/tokens?type=beta)
   - Restrict to a single repository that contains the workflow(s) you want to trigger
   - Repository permissions should be:
     - Read access to metadata
