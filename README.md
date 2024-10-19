@@ -14,7 +14,7 @@ send webhooks to this app to run github user management
 - Setup webhooks at organization level:
   * Trigger events: repository events
   * Content type = `application/json`
-  * Create webhooks here: https://github.com/organizations/<GITHUB_ORG_NAME>/settings/hooks)
+  * Create webhooks here: https://github.com/organizations/<GITHUB_ORG_NAME>/settings/hooks
 
 ### Required env variables
 
