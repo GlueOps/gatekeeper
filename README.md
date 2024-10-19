@@ -4,14 +4,22 @@ send webhooks to this app to run github user management
 
 ## Developer setup
 
-- create a github organization for testing
-- create a PAT(classic) that has full access
-- create a workflow to call (or use github user management workflow)
-- etup webhooks at organization level for repository events
+- Create a GitHub organization for testing
+- [Create a fine-grained access token](https://github.com/settings/tokens?type=beta)
+  - Restrict to a single repository that contains the workflow(s) you want to trigger
+  - Repository permissions should be:
+    - Read access to metadata
+    - Read and write access to actions
+- Create a workflow to call (or use github user management workflow)
+- Setup webhooks at organization level:
+  * Trigger events: repository events
+  * Content type = `application/json`
+  * Create webhooks here: https://github.com/organizations/<GITHUB_ORG_NAME>/settings/hooks
 
-### required env variables
+### Required env variables
 
 ```bash
-GITHUB_DISPATCH_URL=https://api.github.com/repos/<GITHUB_ORG_NAME>/<GITHUB_REPO_NAME>/actions/workflows/sync.yaml/dispatches
+GITHUB_DISPATCH_URL=https://api.github.com/repos/<GITHUB_ORG_NAME>/<GITHUB_REPO_NAME>/actions/workflows/<WORKFLOW_TO_CALL>.yaml/dispatches
 GITHUB_TOKEN=<PAT_TOKEN>
 ```
+
