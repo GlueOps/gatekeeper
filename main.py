@@ -80,6 +80,6 @@ async def health():
     """health check
 
     Returns:
-        string: healthy
+        dict: health status
     """
-    return "healthy"
+    return {"status": "healthy"}
