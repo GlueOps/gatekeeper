@@ -74,3 +74,12 @@ def call_github_user_management_workflow():
 
     # return the status code
     return response.status_code   
+
+@app.get("/health")
+async def health():
+    """health check
+
+    Returns:
+        string: healthy
+    """
+    return "healthy"
