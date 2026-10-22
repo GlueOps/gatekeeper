@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.15.1-alpine@sha256:e85751f6fe48ddb0619557d606ad93685134347a821b85fd9cd9dfa61addb970
+FROM python:3.15.1-alpine@sha256:54448f67d7c31c39e5cdd3ea2d6382395ce142806c284425f8e897d78a0465b3
 
 WORKDIR /app
 # Copy the files into the Docker image
