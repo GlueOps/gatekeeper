@@ -1,2 +1,2 @@
-fastapi[standard]==0.141.1
+fastapi[standard]==0.142.0
 requests==2.34.2
